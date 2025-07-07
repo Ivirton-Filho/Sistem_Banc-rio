@@ -1,3 +1,5 @@
+import json
+
 #declarações de variáveis que serão utilizadas no código
 acao_do_user = 0
 extrato = []
@@ -82,6 +84,11 @@ while True:
 
                 #por fim imprime o saldo atual da conta
                 print(f"O saldo atual da conta é: R$ {saldo}")
+
+                #exportanto o extrato para um arquivo JSON
+                arquivo = open("extrato.json", "w")
+                json.dump(extrato, arquivo)
+                arquivo.close()
 
             case 4:
                 print("\nObrigado por utilizar nossos serviços! :)\n")
