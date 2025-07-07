@@ -23,14 +23,22 @@ while True:
     else :
         match acao_do_user:
             case 1:
-                print("\nOpção de depósito foi selecionada!\n")
-                deposito = input("Digite o valor que deseja depositar!: ")
-                
-                #lógica para que a operação de depositivo ocorra
-                saldo =+ float(deposito)
-                extrato.append("+" + deposito)
-                print("\nO valor foi depositado!\n")
-            
+                while True:
+                    print("\nOpção de depósito foi selecionada!\n")
+                    deposito = input("Digite o valor que deseja depositar!: ")
+
+                    #lógica para que a operação de depositivo ocorra
+                    saldo =+ float(deposito)
+                    extrato.append("+" + deposito)
+                    print("\nO valor foi depositado!\n")
+
+                    # estrutura que controla se o user deseja realizar a operação novamente
+                    controle = input("Deseja continuar? [S/N]: ")
+                    if controle == "S":
+                        continue
+                    else:
+                        break
+
             case 2: 
                 print("\nOpção de saque foi selecionada!\n")
 
