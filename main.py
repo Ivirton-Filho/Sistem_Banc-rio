@@ -29,7 +29,7 @@ while True:
 
                     #lógica para que a operação de depositivo ocorra
                     saldo =+ float(deposito)
-                    extrato.append("+" + deposito)
+                    extrato.append("R$ +" + deposito)
                     print("\nO valor foi depositado!\n")
 
                     # estrutura que controla se o user deseja realizar a operação novamente
@@ -58,7 +58,7 @@ while True:
                     else:
                         saldo = saldo - saque
                         saque = str(saque)
-                        extrato.append("-" + saque)
+                        extrato.append("R$ -" + saque)
                         print("\nO valor foi retirado!\n")
 
                         #estrutura que controla se o user deseja realizar a operação novamente
@@ -74,3 +74,11 @@ while True:
                 #mensagem caso o user tente fazer mais de 3 tentativas de saque
                 if i == 3:
                     print("\nLimite diario de 3 tentativas ultrapassado.")
+
+            case 3:
+                print("\nOpção de extrato foi selecionada!\n")
+
+                #imprime todas as operações realizadas até agora
+                for uso_conta in extrato:
+                    print(uso_conta)
+                    print(f"O saldo atual da conta é: R$ {saldo}")
