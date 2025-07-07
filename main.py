@@ -79,7 +79,10 @@ while True:
                 #imprime todas as operações realizadas até agora
                 for uso_conta in extrato:
                     print(uso_conta)
-                    print(f"O saldo atual da conta é: R$ {saldo}")
+
+                #por fim imprime o saldo atual da conta
+                print(f"O saldo atual da conta é: R$ {saldo}")
+
             case 4:
                 print("\nObrigado por utilizar nossos serviços! :)\n")
                 break
